@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSpark-science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+        }
+        .box {
+            background-color: #000000;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            user-select: none;
+            touch-action: manipulation;
+            display: inline-block;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000) border-box;
+            background-size: 400%;
+            animation: border-run 3s linear infinite;
+            z-index: -1;
+        }
+        @keyframes border-run {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        .box h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .papers {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .papers h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .year-section {
+            margin: 20px 0;
+        }
+        .year-section h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .year-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .year-section li {
+            margin: 10px 0;
+        }
+        .year-section a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .year-section a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: none;
+            text-align: center;
+            color: #0066cc;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .footer p:first-child {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>EduSpark-science</h1>
+    </div>
+    <div class="container">
+        <div class="box" onclick="showPapers()" ontouchstart="showPapers()">
+            <h1>Science</h1>
+        </div>
+        <div class="papers" id="papers">
+            <h1>O/L Science Past Papers (Sinhala Medium)</h1>
+            <div class="year-section">
+                <h2>2016</h2>
+                <ul>
+                    <li><a href="https://www.olevelapi.com/2016-ol-science-part-i-paper-sinhala-medium-online-view/" target="_blank">2016 Part I</a></li>
+                    <li><a
+href="https://www.olevelapi.com/wp-content/uploads/2021/06/2016-OL-SCIENCE-PART-II-PAPER-SINHALA-MEDIUM-OlevelAp-PDF.pdf" target="_blank">2016 Part II</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2017</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/8046/2017-o-l/33405/2017-ol-science-past-paper-sinhala-medium.pdf" target="_blank">2017 Full Paper</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2018</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/8047/2018-o-l/33402/2018-ol-science-past-paper-sinhala-medium.pdf" target="_blank">2018 Full Paper</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2019</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/8048/2019-o-l/33399/2019-ol-science-past-paper-sinhala-medium.pdf" target="_blank">2019 Full Paper</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2020</h2>
+                <ul>
+                    <li><a href="https://www.olevelapi.com/wp-content/uploads/2021/04/2020-OL-SCIENCE-PART-I-MCQ-PAPER-SINHALA-MEDIUM-OlevelApi-PDF.pdf" target="_blank">2020 Part I (MCQ)</a></li>
+                    <li><a href="https://www.olevelapi.com/wp-content/uploads/2022/05/2020-OL-SCIENCE-PART-II-PAPER-SINHALA-MEDIUM-OlevelAp-PDF.pdf" target="_blank">2020 Part II</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2021</h2>
+                <ul>
+                    <li><a href="https://www.olevelapi.com/wp-content/uploads/2022/06/2021-OL-SCIENCE-PART-I-MCQ-PAPER-SINHALA-MEDIUM-OlevelApi-PDF.pdf" target="_blank">2021 Part I (MCQ)</a></li>
+                    <li><a href="https://www.olevelapi.com/wp-content/uploads/2025/02/2021-OL-SCIENCE-PART-II-PAPER-SINHALA-MEDIUM-OlevelAp-PDF.pdf" target="_blank">2021 Part II</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2022/2023</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/23693/20222023-o-l/71653/20222023-ol-science-past-paper-and-answers-3.pdf" target="_blank">2022/2023 Full Paper</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2023/2024</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/27796/20232024-o-l/85659/20232024-ol-science-past-paper-and-answers-3.pdf" target="_blank">2023/2024 Full Paper</a></li>
+                </ul>
+            </div>
+            <div class="year-section">
+                <h2>2024/2025</h2>
+                <ul>
+                    <li><a href="https://pastpapers.wiki/download/32005/20242025-o-l-past-papers/86991/20242025-ol-science-past-paper.pdf" target="_blank">2024/2025 Full Paper</a></li>
+                </ul>
+            </div>
+            <a href="#" class="back-link" onclick="hidePapers()" ontouchstart="hidePapers()">Back to Home</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>All Rights Reserved</p>
+        <p>Sathmin ofc 2025</p>
+    </div>
+    <script>
+        function showPapers() {
+            document.querySelector('.box').style.display = 'none';
+            document.querySelector('.papers').style.display = 'block';
+            document.querySelector('.back-link').style.display = 'block';
+        }
+        function hidePapers() {
+            document.querySelector('.box').style.display = 'inline-block';
+            document.querySelector('.papers').style.display = 'none';
+            document.querySelector('.back-link').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
